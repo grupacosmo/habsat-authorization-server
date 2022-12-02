@@ -1,12 +1,18 @@
 spring:
   application:
     name: 'authorization-server'
+  config:
+    import: configserver:http://config-server:8061
   data:
     mongodb:
-      host: 'localhost'
-      port: 27017
-      database: 'session'
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      database: ${MONGO_DB}
 server:
-  port: 1234
+  port: 8001
   servlet:
     context-path: '/auth'
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URL}
