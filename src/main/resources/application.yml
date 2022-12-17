@@ -7,7 +7,6 @@ spring:
       port: ${MONGO_PORT}
       database: ${MONGO_DB}
 server:
-  port: 8001
   servlet:
     context-path: '/auth'
 eureka:
