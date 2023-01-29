@@ -1,14 +1,13 @@
 spring:
   application:
-    name: 'authorization-server'
+    name: "authorization-server"
   data:
     mongodb:
-      host: ${MONGO_HOST}
-      port: ${MONGO_PORT}
+      uri: ${MONGO_URI}
       database: ${MONGO_DB}
 server:
   servlet:
-    context-path: '/auth'
+    context-path: "/auth"
 eureka:
   client:
     service-url:
